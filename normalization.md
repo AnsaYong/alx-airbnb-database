@@ -58,7 +58,7 @@
 ### Step 3: Applying 3NF (Remove transitive dependencies (non-key attributes depending on other non-key attributes))
 * **User Table**: No transitive dependencies exist; all non-key attributes (e.g., email, role) depend directly on user_id.
 * **Booking Table**: total_price is derived, so it is removed from the Booking table and should be calculated dynamically.
-    * For example: 
+    * For example: Using complex SQL operations like JOIN
 * **Payment Table**: No transitive dependencies. Each attribute (amount, payment_date, payment_method) depends directly on payment_id.
 * **Review Table**: No transitive dependencies. Attributes like rating and comment depend only on review_id.
 * **Message Table**: No transitive dependencies. Each attribute (message_body, sent_at) depends directly on message_id.
