@@ -71,6 +71,7 @@ CREATE TABLE Message (
 );
 
 -- Indexes for efficient queries
+-- The booking_id and property_id are PKs in Booking and Property tables respectively, so no need to create indexes for them
 CREATE INDEX idx_user_email ON User(email);
 CREATE INDEX idx_booking_property ON Booking(property_id);
 CREATE INDEX idx_payment_booking ON Payment(booking_id);
